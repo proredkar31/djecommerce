@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'djecom.urls'
@@ -149,6 +150,7 @@ LOGIN_REDIRECT_URL = '/'
 # Make it false if you don't need email varfication
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # # Email for recovery password
